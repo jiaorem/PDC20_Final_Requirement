@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html ng-app="app">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>YLE Wheels Club</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <!-- owl stylesheets --> 
+      <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Raleway:400,700,800&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="css/owl.carousel.min.css">
+      <link rel="stylesoeet" href="css/owl.theme.default.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+   </head>
+   <body>
+      <!-- header section start -->
+      <div class="header_section header_bg">
+         <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a href="#!/home" class="logo"><img src="images/ylelogo.png"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+               <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active">
+                     <a class="nav-link" href="#!/home">Home</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#!/about">About</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#!/brandnew">Brand New Cars</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#!/usedcars">Used Cars</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#!/news">News</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#!/contact">Contact Us</a>
+                  </li>
+                  <li style="color:white;"></li>
+               </ul>
+               
+               <form class="form-inline my-2 my-lg-0">
+                  <div class="login_menu">
+                     <ul>
+                        <li ng-if="vm.loggedin"><a href="#!/login">Logout</a></li>
+                        <li ng-if="!vm.loggedin"><a href="#!/login">Login</a></li>
+                        <li><a href="#"><img src="images/trolly-icon.png"></a></li>
+                        <li><a href="#"><img src="images/search-icon.png"></a></li>
+                     </ul>
+                  </div>
+                  <div></div>
+               </form>
+            </div>
+            <div id="main">
+               <span style="font-size:36px;cursor:pointer; color: #fff" onclick="openNav()"><img src="images/toggle-icon.png" style="height: 30px;"></span>
+            </div>
+         </nav>
+         <!-- banner section start -->
+         <div class="banner_section layout_padding">
+            <div id="main_slider" class="carousel slide" data-ride="carousel" data-interval="1000">
+               <div class="carousel-inner">
+                  <div class="carousel-item active">
+                     <div class="container">
+                        <div class="row">
+                           <div class="col-md-7">
+                              <div class="best_text">Best</div>
+                              <div class="image_1"><img src="images/3.png"></div>
+                           </div>
+                           <div class="col-md-5">
+                              <h1 class="banner_taital">Top Brand New Car 2023</h1>
+                              <p class="banner_text">The all-new 4th generation Sportage carries the signature tiger grille and the new black roof that separates it from the competition.</p>
+                              <div class="contact_bt"><a href="#!/brandnew">Shop Now</a></div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="carousel-item">
+                     <div class="container">
+                        <div class="row">
+                           <div class="col-md-7">
+                              <div class="best_text">Best</div>
+                              <div class="image_1"><img src="images/7.png"></div>
+                           </div>
+                           <div class="col-md-5">
+                              <h1 class="banner_taital">Top Brand New Car 2023</h1>
+                              <p class="banner_text">The Mitsubishi Xpander is a seven-seater small MPV which was launched by Mitsubishi Motor Philippine Corporation’s (MMPC) in March 2018. Replacing the brand’s AUV, the Adventure, the Xpander slots in with its dynamic shield design and car-like chassis.</p>
+                              <div class="contact_bt"><a href="#!/brandnew">Shop Now</a></div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="carousel-item">
+                     <div class="container">
+                        <div class="row">
+                           <div class="col-md-7">
+                              <div class="best_text">Best</div>
+                              <div class="image_1"><img src="images/9.png"></div>
+                           </div>
+                           <div class="col-md-5">
+                              <h1 class="banner_taital">Top Brand New Cars 2023</h1>
+                              <p class="banner_text">The Mazda6 is the midsize sedan entry of Mazda Philippines. Pegged as an executive sedan that you’d want to drive, the Mazda6 has the appeal of a sensual vehicle and the driving traits of a powerful daily driver.</p>
+                              <div class="contact_bt"><a href="#!/brandnew">Shop Now</a></div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- banner section end -->
+      </div>
+      <!-- header section end -->
+      <!-- cycle section start -->
+      <div class="cycle_section layout_padding">
+         <div class="container">
+            <h1 class="cycle_taital">Top Cars</h1>
+            <p class="cycle_text">It is a long established fact that a reader will be distracted by the </p>
+            <div class="cycle_section_2 layout_padding">
+               <div class="row">
+                  <div class="col-md-6">
+                     <div class="box_main">
+                        <h6 class="number_text">01</h6>
+                        <div class="image_2"><img src="images/1.png"></div>
+                     </div>
+                  </div>
+                  <div class="col-md-6">
+                     <h1 class="cycles_text">Ford Territory 2023</h1>
+                     <p class="lorem_text">The Ford Territory was launched in August of 2020 and serves as the brand's new compact crossover in its Philippine lineup of vehicles. It fits in between the Ecosport and the Explorer in the Blue Oval's crossover selection. </p>
+                     <div class="btn_main">
+                        <div class="buy_bt"><a href="#">Buy Now</a></div>
+                        <h4 class="price_text">Price <span style=" color: #f7c17b">₱</span> <span style=" color: #325662">2,366,000</span></h4>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <br>
+            <div class="cycle_section_3 layout_padding">
+               <div class="row">
+                  <div class="col-md-6">
+                     <h1 class="cycles_text">MG HS 2023</h1>
+                     <p class="lorem_text">The MG HS is the brand's newest 5-seater compact crossover SUV to enter the market. It is made available with two variants, the Alpha and the Trophy, and it utilizes a similar chassis to its other compact crossover brothers within the brand's lineup.</p>
+                     <div class="btn_main">
+                        <div class="buy_bt"><a href="#">Buy Now</a></div>
+                        <h4 class="price_text">Price <span style=" color: #f7c17b">₱</span> <span style=" color: #325662">1,308,888</span></h4>
+                     </div>
+                  </div>
+                  <div class="col-md-6">
+                     <div class="box_main_3">
+                        <h6 class="number_text_2">02</h6>
+                        <div class="image_2"><img src="images/2.png"></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="cycle_section_2 layout_padding">
+               <div class="row">
+                  <div class="col-md-6">
+                     <div class="box_main_3">
+                        <h6 class="number_text_2">03</h6>
+                        <div class="image_2"><img src="images/3.png"></div>
+                     </div>
+                  </div>
+                  <div class="col-md-6">
+                     <h1 class="cycles_text">Kia Sportage 2023</h1>
+                     <p class="lorem_text">With the rapid increase in popularity of the crossover segment in the Philippines, the Kia Sportage is one of those who remained competitive.</p>
+                     <div class="btn_main">
+                        <div class="buy_bt"><a href="#">Buy Now</a></div>
+                        <h4 class="price_text">Price <span style=" color: #f7c17b">₱</span> <span style=" color: #325662">1,820,000</span></h4>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="cycle_section_3 layout_padding">
+               <div class="row">
+                  <div class="col-md-6">
+                     <h1 class="cycles_text">Suzuki Ertiga 2023</h1>
+                     <p class="lorem_text">Here is Suzuki Philippines’ entry into the highly competitive small MPV market, the Suzuki Ertiga. Available with GA, GL, and GLX variants, the model lineup comes with a broad range of prices and specifications. As a seven-seater in the Philippines, owners may enjoy a modular seating system that can allow for more cargo or more passenger seating space. Coupled with the reliability and fuel economy of Suzuki vehicles, and consumers can enjoy long-term use with much utility, a much-needed trait of an MPV. </p>
+                     <div class="btn_main">
+                        <div class="buy_bt"><a href="#">Buy Now</a></div>
+                        <h4 class="price_text">Price <span style=" color: #f7c17b">₱</span> <span style=" color: #325662">1,308,888</span></h4>
+                     </div>
+                  </div>
+                  <div class="col-md-6">
+                     <div class="box_main_3">
+                        <h6 class="number_text_2">04</h6>
+                        <div class="image_2"><img src="images/4.png"></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="read_btn_main">
+               <div class="read_bt"><a href="#">Read More</a></div>
+            </div>
+         </div>
+      </div>
+      <!-- cycle section end -->
+      <!-- about section start -->
+      <div class="about_section layout_padding">
+         <div class="container">
+            <h1 class="about_taital">About YLE Wheels Club</h1>
+            <p class="about_text">Welcome to YLE Wheels Club official website, where you can learn about the company's luxurious ride. YLE stands for Yabut, Lopez, and Echon—last name of the Wheels Club owners. Personalising your Car with accessories. Knowing you’re covered for an accident or breakdown. And keeping your car in showroom condition. It’s all part of our support.</p>
+            <div class="about_main">
+               <img src="images/9.png" class="image_5">
+            </div>
+            <div class="read_bt_1"><a href="#">Read More</a></div>
+         </div>
+      </div>
+      <!-- about section end -->
+      <!-- client section start -->
+      <div class="client_section layout_padding">
+         <div id="my_slider" class="carousel slide" data-ride="carousel" data-interval="30">
+            <div class="carousel-inner">
+               <div class="">
+                  <div class="container">
+                     <div class="client_main">
+                        <h1 class="client_taital">Behind YLE Wheels Club</h1>
+                        <div class="client_section_2">
+                           <div class="client_left">
+                              <div><img src="images/client1.jpg" class="client_img"></div>
+                           </div>
+                           <div class="client_right">
+                              <div class="quote_icon"><img src="images/quote-icon.png"></div>
+                              <p class="client_text">Excellent friendly service. Every associate went above and beyond to help us. We were treated like valued customers and not just another number or sale. Our next car will be bought here.</p>
+                              <h3 class="client_name">David Aaron Echon</h3>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div>
+                  <div class="container">
+                     <div class="client_main">
+                        <h1 class="client_taital">Says Customers</h1>
+                        <div class="client_section_2">
+                           <div class="client_left">
+                              <div><img src="images/client3.jpg" class="client_img"></div>
+                           </div>
+                           <div class="client_right">
+                              <div class="quote_icon"><img src="images/quote-icon.png"></div>
+                              <p class="client_text">We purchased a vehicle and had a great experience! The staff is very friendly and answered all our questions. Hassle-free test drive and all information clearly presented. We will definitely recommend Quality Car Sales to anyone looking for a car!</p>
+                              <h3 class="client_name">Karylle Lopez</h3>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div>
+                  <div class="container">
+                     <div class="client_main">
+                        <h1 class="client_taital">Says Customers</h1>
+                        <div class="client_section_2">
+                           <div class="client_left">
+                              <div><img src="images/client4.jpg" class="client_img"></div>
+                           </div>
+                           <div class="client_right">
+                              <div class="quote_icon"><img src="images/quote-icon.png"></div>
+                              <p class="client_text">Very nice people. Good Service and Informative. Don't force you into the deal. Make you comfortable while you choose the car you want to buy from their vast inventory.</p>
+                              <h3 class="client_name">Micoh Jomarie Yabut</h3>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- client section end -->
+      <!-- news section start -->
+      <div class="news_section layout_padding">
+         <div class="container">
+            <h1 class="news_taital">News</h1>
+            <p class="news_text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using </p>
+            <div class="news_section_2 layout_padding">
+               <div class="row">
+                  <div class="col-sm-4">
+                     <div class="box_main_1">
+                        <div class="frame"><img src="images/news1.jpg"></div>
+                        <div class="padding_15">
+                           <h2 class="speed_text">2024 Ram 1500 EV</h2>
+                           <div class="post_text">Post by : Aaron<span style="float: right;">01-13-2023</span></div>
+                           <p class="long_text">The 2024 Ram 1500 EV is the brand's first electric pickup, and the company claims that it will beat its competition in both range and more...</p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-sm-4">
+                     <div class="box_main_1">
+                        <div class="frame"><img src="images/news2.jpg"></div>
+                        <div class="padding_15">
+                           <h2 class="speed_text">2024 Volkswagen ID.7</h2>
+                           <div class="post_text">Post by : Karylle <span style="float: right;">01-13-2023</span></div>
+                           <p class="long_text">Volkswagen’s expanding ID family of EVs is growing to include the ID.7 sedan, a Passat-sized four-door with sleek, aerodynamic lines...</p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-sm-4">
+                     <div class="box_main_1">
+                        <div class="frame"><img src="images/news3.jpg"></div>
+                        <div class="padding_15">
+                           <h2 class="speed_text">2024 Hyundai Kona Electric</h2>
+                           <div class="post_text">Post by : Micoh <span style="float: right;">01-13-2023</span></div>
+                           <p class="long_text">Hyundai stuffs the next-generation subcompact 2024 Kona Electric SUV with more pixels, styling that’s so wild it’s distracting and it’s...</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- news section end -->
+      <!-- contact section start -->
+      <div class="contact_section layout_padding">
+         <div class="container">
+            <div class="contact_main">
+               <h1 class="request_text">A Call Back</h1>
+               <form action="/action_page.php">
+                  <div class="form-group">
+                     <input type="text" class="email-bt" placeholder="Name" name="Name">
+                  </div>
+                  <div class="form-group">
+                     <input type="text" class="email-bt" placeholder="Email" name="Name">
+                  </div>
+                  <div class="form-group">
+                     <input type="text" class="email-bt" placeholder="Phone Numbar" name="Email">
+                  </div>
+                  <div class="form-group">
+                     <textarea class="massage-bt" placeholder="Massage" rows="5" id="comment" name="Massage"></textarea>
+                  </div>
+               </form>
+               <div class="send_btn"><a href="#">SEND</a></div>
+            </div>
+         </div>
+      </div>
+      <!-- contact section end -->
+      <!-- footer section start -->
+      <div class="footer_section layout_padding">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-lg-8 col-sm-12 padding_0">
+                  <div class="map_main">
+                     <div class="map-responsive">
+                       <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&amp;q=Eiffel+Tower+Paris+France" width="600" height="400" frameborder="0" style="border:0; width: 100%;" allowfullscreen=""></iframe>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-4 col-sm-12">
+                  <div class="call_text"><a href="#"><img src="images/map-icon.png"><span class="padding_left_0">YLE Club, BGC, Philippines</span></a></div>
+                  <div class="call_text"><a href="#"><img src="images/call-icon.png"><span class="padding_left_0">Call Now  +01 123467890</span></a></div>
+                  <div class="call_text"><a href="#"><img src="images/mail-icon.png"><span class="padding_left_0">wheels@gmail.com</span></a></div>
+                  <div class="social_icon">
+                     <ul>
+                        <li><a href="#"><img src="images/fb-icon1.png"></a></li>
+                        <li><a href="#"><img src="images/twitter-icon.png"></a></li>
+                        <li><a href="#"><img src="images/linkedin-icon.png"></a></li>
+                        <li><a href="#"><img src="images/instagram-icon.png"></a></li>
+                     </ul>
+                  </div>
+                  <input type="text" class="email_text" placeholder="Enter Your Email" name="Enter Your Email">
+                  <div class="subscribe_bt"><a href="#">Subscribe</a></div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- footer section end -->
+      <!-- copyright section start -->
+      <div class="copyright_section">
+         <div class="container">
+            <p class="copyright_text">Copyright 2023 All Right Reserved | by <a href="https://html.design">YLE WHEELS CLUB!</p>
+         </div>
+      </div>
+      <!-- copyright section end -->    
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <script src="js/plugin.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+      <!-- javascript --> 
+      <script src="js/owl.carousel.js"></script>
+      <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+      <script>
+         function openNav() {
+           document.getElementById("mySidenav").style.width = "250px";
+           document.getElementById("main").style.marginLeft = "250px";
+         }
+         
+         function closeNav() {
+           document.getElementById("mySidenav").style.width = "0";
+           document.getElementById("main").style.marginLeft= "0";
+          
+         }
+
+         $("#main").click(function(){
+             $("#navbarSupportedContent").toggleClass("nav-normal")
+         })
+      </script>
+   </body>
+</html>
